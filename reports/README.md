@@ -1,4 +1,4 @@
-Here's a detailed report template for a phishing email attack, based on your scenario involving a fraudulent Costco gift voucher email:
+This is a detailed report template for a phishing email attack, based on the scenario involving a fraudulent Costco gift voucher email:
 
 ---
 
@@ -6,7 +6,7 @@ Here's a detailed report template for a phishing email attack, based on your sce
 
 ## Executive Summary
 
-**Objective**: This report investigates a phishing email attack involving a fraudulent Costco gift voucher of $2000, identified and analyzed to determine its impact and provide recommendations for future prevention.
+**Objective**: This report investigates a phishing email attack involving a fraudulent Costco gift voucher of $1000, identified and analyzed to determine its impact and provide recommendations for future prevention.
 
 **Key Findings**:
 
@@ -22,7 +22,7 @@ Here's a detailed report template for a phishing email attack, based on your sce
 
 ## Incident Overview
 
-**Incident Description**: A phishing email purporting to offer a $2000 Costco gift voucher was received by several employees. The email was designed to trick recipients into clicking on a malicious link.
+**Incident Description**: A phishing email purporting to offer a $1000 Costco gift voucher was received by several employees. The email was designed to trick recipients into clicking on a malicious link.
 
 **Timeline of Events**:
 
@@ -35,18 +35,20 @@ Here's a detailed report template for a phishing email attack, based on your sce
 
 **Email Details**:
 
-- **Sender Address**: support@gxamodm.ep-dev.cloudops.globe.com.ph
+- **Sender Address**: 1gc9f3ej3oqul@i2nvnwp29.yolwcyfk.com
 - **Subject Line**: "Re: Akkip Second Attempt for #Akkip's $1000 Costco Gift Card"
 - **Email Body**:
+
   ```
-  Congratulations! You have been selected to receive a $2000 Costco gift voucher. Click the link below to claim your reward.
-  [Claim Now](http://malicious-link.com)
+  Congratulations! You have been selected to receive a $1000 Costco gift voucher. Click the link below to claim your reward.
+
+  [Confirm Here](https://storage.googleapis.com/dfg153erh35ef1gdr/dfgremjflmgr.html#idf2myzxq24u.wBnQbTVBgtjE?d9WJQVccW7rDcxKFkcdcWYc8cHC09dFq7cbbb5z)
   ```
 
 **Indicators of Compromise (IoCs)**:
 
-- **Malicious URL**: http://malicious-link.com
-- **Sender IP Address**: 192.168.1.100 (identified as unsafe)
+- **Malicious URL**: Multiple Advertisments and malicious URLs
+- **Sender IP Address**: 185.222.162.71 (identified as unsafe)
 
 **Header Analysis**:
 

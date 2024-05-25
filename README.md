@@ -33,6 +33,8 @@ SOC analysts collect suspected phishing emails from various sources like user re
 
 Examine email headers to identify suspicious elements such as spoofed addresses, unusual sending patterns, and anomalous metadata.
 
+![Email Header Analysis](images/cotsco-header.png)
+
 ```bash
 # Example script to extract email headers
 python3 scripts/extract-email-headers.py data/sample-emails/email1.eml
@@ -43,6 +45,8 @@ The Python scripts will be in the Scripts repository (File name: extract-email-h
 ### Step 3: Email Body Analysis including URL and Attachment Analysis
 
 Analyze the content of the email body for malicious links, attachments, and social engineering tactics for malware and phishing pages.
+
+![Email Body Analysis](images/cotsco-hover-link.png)
 
 ```bash
 # Example script to extract email body Analysis
