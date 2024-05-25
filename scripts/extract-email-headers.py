@@ -12,7 +12,7 @@ phishing_keywords = {"urgent", "immediately", "password", "verify", "account", "
 
 def file_to_str(filename):
     """Returns the contents of filename as a string."""
-    with open(filename) as f:
+    with open(filename, encoding='utf-8', errors='ignore') as f:
         return f.read().lower()
 
 def get_emails(s):

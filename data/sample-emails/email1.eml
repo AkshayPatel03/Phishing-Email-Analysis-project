@@ -1,0 +1,533 @@
+Delivered-To: akki007p@gmail.com
+Received: by 2002:a05:6504:56c1:b0:266:f51c:ca5d with SMTP id v1csp1792843lty;
+        Fri, 24 May 2024 13:19:41 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IEHajr6rXdMz37thrhYLdFD0eTs7UDB6VQi9yYURDNkLLErrlM2/TLo6oxzuywpzNP8XPHK
+X-Received: by 2002:a05:6a00:28cd:b0:6f6:94f7:49c0 with SMTP id d2e1a72fcca58-6f8f2d6a894mr3515320b3a.11.1716581981303;
+        Fri, 24 May 2024 13:19:41 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1716581981; cv=none;
+        d=google.com; s=arc-20160816;
+        b=OpdNW2YeiTnC20LIHyM0oq15hRDQTnvDuJSdrd34ZGFlFj6zlW8hjdpKyrU+HwFT5G
+         V79g0gNJZ3pbmlabErMNvIvV7CjNTB8d/0mKnw4hthXiy2wWB8316sRQuxtrKpHl/2J5
+         gcyKXL0KpksTuJuao1gW+1CsPt0jD3XXEzb65as7VVu+Qqd5zOnmFmuEa6olIDx403Nb
+         WfG0UybB7MH76gxYF+37VN/8LujMig/Jt+ung6aNEJLdgt1kZ9A+BRwHQQ6ZbumqQotm
+         8YK8HsUFsNTMP6tq6M8ZSb7fkExbLjfm/TTr/K+aNgpotdxZuwqbJv91fpfhcYpI9Sxb
+         l3Nw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=list-id:list-unsubscribe-post:list-unsubscribe:feedback-id:from
+         :message-id:subject:reply-to:preheader:mime-version:date:to
+         :dkim-signature;
+        bh=PTyiYl4hPL+tNNGYoxOi1fvU5xVF7M6annk/7Q0K//o=;
+        fh=MjGd5hoRwK909tl1gIO1x7zivTENqErwc8SctRVb7gU=;
+        b=F8Gc5L5zmzCQ9r6nOkUk9LMVbvYdB3Qs6+xIpJxWzX7M2eIr+JAvBmtXeSYbmsQTcy
+         8u4DbkqMsOU8wlQNHDu75/clSeO+waUioA2NOGe7oM9xzzkmmXj8cS11xnctO2QoXPdX
+         vM3FcX2d8B656Q5uwraMTiJ1sCWJFIK5jjsGkT+7jkUAMA2K6J9nFyrxOyXFbXf+Qc3U
+         a1b0m6V5cpxEdkhDqr7kwvpsDIA8SFfDRAxRZlojOHbreOsQI1GGfgeH/oZiy04Jrqkm
+         L/kgFtLrhJMKspOshdoVHA/QYSg8bM9y6raDi0tXDPts27Zfj67ozh2PggWqd0iURyZE
+         mZZw==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@indeed.com header.s=sp2210 header.b=f3Wx67hB;
+       spf=pass (google.com: domain of msprvs1=19874xcmpqypa=bounces-294276@bounces.indeed.com designates 156.70.53.21 as permitted sender) smtp.mailfrom="msprvs1=19874xcMPQypa=bounces-294276@bounces.indeed.com";
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=indeed.com
+Return-Path: <msprvs1=19874xcMPQypa=bounces-294276@bounces.indeed.com>
+Received: from mta-70-53-21.indeed.com.sparkpostmail.com (mta-70-53-21.indeed.com.sparkpostmail.com. [156.70.53.21])
+        by mx.google.com with ESMTPS id d2e1a72fcca58-6f8fc36d245si2028900b3a.126.2024.05.24.13.19.40
+        for <akki007p@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Fri, 24 May 2024 13:19:41 -0700 (PDT)
+Received-SPF: pass (google.com: domain of msprvs1=19874xcmpqypa=bounces-294276@bounces.indeed.com designates 156.70.53.21 as permitted sender) client-ip=156.70.53.21;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@indeed.com header.s=sp2210 header.b=f3Wx67hB;
+       spf=pass (google.com: domain of msprvs1=19874xcmpqypa=bounces-294276@bounces.indeed.com designates 156.70.53.21 as permitted sender) smtp.mailfrom="msprvs1=19874xcMPQypa=bounces-294276@bounces.indeed.com";
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=indeed.com
+X-MSFBL: 8DjESQEEJu4R70eGX27ysylo8LYuTqm5nnaC1v+6CfE=|eyJjdXN0b21lcl9pZCI
+	6IjI5NDI3NiIsInIiOiJha2tpMDA3cEBnbWFpbC5jb20iLCJzdWJhY2NvdW50X2l
+	kIjoiMCIsInRlbmFudF9pZCI6InNwYyIsIm1lc3NhZ2VfaWQiOiI2NjQ2NWNmNjU
+	wNjYzMWEyMGQ4NSJ9
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=indeed.com;
+	s=sp2210; t=1716581980; i=@indeed.com;
+	bh=PTyiYl4hPL+tNNGYoxOi1fvU5xVF7M6annk/7Q0K//o=;
+	h=To:Date:Content-Type:Subject:Message-ID:From:List-Unsubscribe:
+	 List-Unsubscribe-Post:From:To:Cc:Subject;
+	b=f3Wx67hBS6FjDHRi+z9gSAsyEkoZ2UYvDMkoiJedSnXkIl0SMLD807CFnN0eLg48Z
+	 ouSy0mT51UbD1xubzZJrPPZVAEoEUufYe9n8kSgaSwuBW880f3UPIWbrEh8iy/njU5
+	 2DzT0Sy+eIN66vSvny3rVfOKWBpMuYb82Vl0qQDarzsCNkNHmd4wFP1wibK9qY+w3X
+	 +73Ytn50/Xv7oKwFE1zz7qWqhJX8ZRIIjK4Jiqzith9eTEbVM+60hpBJUQEUWcPzRA
+	 Fv0QQ/eTakIpNcfFV2du78bDm6twojcW9YpcoY0lY0jOG+jDAH4NiGgzKoNclwK/4t
+	 M7gmo32Bd1xqA==
+To: <akki007p@gmail.com>
+Date: Fri, 24 May 2024 20:19:40 +0000
+Content-Type: multipart/alternative; boundary="_----IyzJhNaunIDBeUPmiCnxNQ===_18/D0-35342-C56F0566"
+MIME-Version: 1.0
+Preheader: Apply to jobs at NAV Canada and Bank of Canada 
+X-Indeed-FBL: 65a15aea101c1f4981457f9f:2:8939b966a26ab56165737656631f8e3caf913a68ab01ae24
+x-campaign-id: JOBALERT
+Reply-To: Indeed <do-not-reply@indeed.com>
+X-Indeed-Content-Type: JOBALERT
+Subject: NAV Canada is hiring for Infrastructure Analyst + 3 new cybersecurity analyst jobs in Ottawa, ON 
+Message-ID: <1hum44k3ai1u1801.1716581980812.Railgunner@railgun--railgunner-jobsearchrailclipservice-7c96c67445-scx45>
+From: "Indeed" <alert@indeed.com>
+X-Indeed-Client-App: RailgunnerDaemon
+X-Indeed-TK: 1hum44mkcpbv4801
+Feedback-ID: JOBALERT:RailgunnerDaemon:Indeed
+List-Unsubscribe: <mailto:unsubscribe@unsub.spmta.com?subject=unsubscribe:CZLjZgf-WJ6T8WUxHt0kV_LcwTpdvMdxyZjFkzpGA0A~|eyAicmNwdF90byI6ICJha2tpMDA3cEBnbWFpbC5jb20iLCAidGVuYW50X2lkIjogInNwYyIsICJjdXN0b21lcl9pZCI6ICIyOTQyNzYiLCAibWVzc2FnZV9pZCI6ICI2NjQ2NWNmNjUwNjYzMWEyMGQ4NSIsICJzdWJhY2NvdW50X2lkIjogIjAiIH0~>,<https://unsubscribe.spmta.com/u/tS6E24SpVUmzVf2bGVJVOQ~~/AAR9hAA~/RgRoM3tcPFcDc3BjQgpmRlz2UGYxog2FUhJha2tpMDA3cEBnbWFpbC5jb21YBAAAAAA~>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+List-Id: <spc.294276.0.sparkpostmail.com>
+
+--_----IyzJhNaunIDBeUPmiCnxNQ===_18/D0-35342-C56F0566
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset="UTF-8"
+
+Indeed Job Alert=0A3 new cybersecurity analyst opportunities in Ottawa, ON=
+=0A=0AJobs 1-2 of 3 new jobs=0ASee matching results on Indeed: https://ca.i=
+ndeed.com/jobs=3Fq=3Dcybersecurity+analyst&hl=3Den&from=3Dja&l=3DOttawa%2C+=
+ON&radius=3D50&alid=3D65a15aea101c1f4981457f9f&tmtk=3D1hum44k3ai1u1801&utm_=
+campaign=3Djob_alerts&utm_medium=3Demail&utm_source=3Djobseeker_emails&of=
+=3D1&fr=3Dt=0A=0A=0AInfrastructure Analyst=0ANAV Canada - Ottawa, ON=0A$107=
+,682 - $135,272 a year=0AKnowledge of cybersecurity considerations in infra=
+structure technologies, systems, and services. Participates in the work inv=
+olved in the planning, development,=E2=80=A6=0A2 days ago=0Ahttps://ca.inde=
+ed.com/rc/clk/dl=3Fjk=3D70476212c6e69c56&from=3Dja&qd=3DRnZhMybXSk4M3QtTVGX=
+WoX6pZRaEo22AT5xy2gTKw41Q9nTKmOUPniAR8eLKyC6N0wrMAgcEtFQX8hcHmhb-emqNNetQ5R=
+BDvfzhxoeKRdA&rd=3DEvLisMDFuvoFoCasnNPvI1_MKnaSAFGAsD6kfERFt3g&tk=3D1hum44k=
+3ai1u1801&alid=3D65a15aea101c1f4981457f9f&bb=3DQULipIB34PYas2Di7MphMRvASctf=
+dRx2v6gxQfU0jGrhC5ASXBv4sYstGlvB6KxfYJIH2EPn9ieQXegEB3asQavSyvc0I8S9EwJw3zy=
+OS99X0usKhgSBQBARGANOBt6UkyRTZ1hz80wf-iVoqj82YA%3D%3D=0A=0ASenior Informati=
+on Security Analyst=0ABuchanan Technologies - Ottawa, ON=0A$90 - $100 an ho=
+ur=0AEasily apply=0AImprove cybersecurity processes and documentation. Deve=
+lop cybersecurity metrics, measurement criteria, and reporting to ensure co=
+mpliance and continuous=E2=80=A6=0AJust posted=0Ahttps://ca.indeed.com/page=
+ad/clk/dl=3Fmo=3Dr&ad=3D-6NYlbfkN0BTlVOecmu7vzuMx0kgVGlE9ftidFsEsAB-wXc2Edp=
+XUVCxxQiQ93o7_BjcfLQEyw-WFCJhF4HJngSTmy7ebuTmCKXmLYeEa7mL_Je279vqh1gIghpwCq=
+4gZe98PFn_fGg7tZI3ocGY0BX-UHHHdThjhJWBx6ibaWdXo8p-5GZUkuyrTw1lqEaKVMG2xa1gC=
+RuZrytUFxYN3M7cY3-xBbQSoK89dJkNkQlUZvABfjxVDATlVOejQD-v8wBdHTccpfEhLOB4TkIF=
+CDuAMAi32Dxrk3CjqntzOoWYYLn4AWOuW2geyy8irDGWgvLHWdvkIcmwyZTssxRsEDakKVIgLJm=
+KFgV6c2c534n0QwPaA7a7IGZGkT6sKQpBhE914c5meg3uXWeR5MWatvqneus-qvcxFJPlq5j12e=
+Q1kVikFJooDuuVS378jcXycnX9ebOW30MEj5uXQHhFHaLl5_-qqY9Z5--fuXpEHmepk5q4c62oK=
+c1K18obIQOgSVPTM7ddPci-1kVYBs3OR5iMseRlg3P7U0s0Z86oJmwlEQ1R-rtlY2YAFUnTULi1=
+ma-wk2mwfW7ltdKT6dVxfwTG-XZC1GabNEYlqGqB586kKflUrbLzGbprfnkwz05TVQ-wtjxUUx4=
+tWQKAejAHwiDE2euBjqmKKRDT8WcEDZcj6qC0V3eDVKwmjvr_tzdO3p_5zy9mJLo%3D&xkcb=3D=
+SoBn6_M3AWAdGlwTQx0KbzkdCdPP&camk=3D4HOcmqOLYrAFdubeOPdc3A%3D%3D&p=3D0&jsa=
+=3D9777&rjs=3D1&tmtk=3D1hum44k3ai1u1801&gdfvj=3D1&alid=3D65a15aea101c1f4981=
+457f9f&fvj=3D1=0A=0ASecurity Risk Analyst=0ABank of Canada - Ottawa, ON=0AH=
+ybrid remote=0AKnowledge of information security, cybersecurity, and techno=
+logy risks (including frameworks such as NIST and ISO). What you need to su=
+cceed.=0AJust posted=0Ahttps://ca.indeed.com/rc/clk/dl=3Fjk=3D354970960024e=
+085&from=3Dja&qd=3DRnZhMybXSk4M3QtTVGXWoX6pZRaEo22AT5xy2gTKw41Q9nTKmOUPniAR=
+8eLKyC6N0wrMAgcEtFQX8hcHmhb-emqNNetQ5RBDvfzhxoeKRdA&rd=3DFzlTg_mIv5FOCOtUGr=
+Vy1F_MKnaSAFGAsD6kfERFt3g&tk=3D1hum44k3ai1u1801&alid=3D65a15aea101c1f498145=
+7f9f&bb=3Dc6qmzqMprOc0V9c_O5tie3y4Z0Dq8TUhelG7vwRR_vXAn9OyEs3zt8HD_MYsrdNT0=
+iXGEfqPGZuwBU5MZzFGdgHJb_DL5gK08g0noRQz6N1HNJklWmTQgTDrQSK-Gi4S7KiP-t5xP53t=
+d7F603TK-w%3D%3D=0A=0A=0A=0ADo not share this email=0AThis email contains s=
+ecure links that are personalized to you. Please do not share this email or=
+ links with others.=0A=0ASalaries estimated if unavailable. When a job post=
+ing doesn't include a salary, we estimate it by looking at similar jobs. Es=
+timated salaries are not endorsed by the companies offering those positions=
+ and may vary from actual salaries.=0A=0A=C2=A9 2024 Indeed Ireland Operati=
+ons, Ltd. =0AIndeed Ireland Operations Limited, Block B, Capital Dock, 80 S=
+ir John Rogerson's Quay, Grand Canal Dock, Dublin, 2, D02 HE36 =0APrivacy P=
+olicy: https://ca.indeed.com/legal=3Fhl=3Den#privacy =0ATerms: https://ca.i=
+ndeed.com/legal=3Fhl=3Den =0AHelp Centre: https://support.indeed.com/hc/en-=
+ca =0AManage email settings: https://subscriptions.indeed.com=3Ftoken=3DCkC=
+zspG7Oc5OXDZrT1Pd7k7qZc4qzjgNLx0mjKP1EAb2sks5d6240cuFS1OCQxxib5Ys52ipfusDCm=
+cz_NN5YC6NEiAdc18oxEwyZUYJ461SrflESr9O9gNBrZYhLzoJDX3AARoQcWyQ2lWEVzi4hFMRq=
+qhm4Q%3D%3D&co=3DCA&hl=3Den&tmtk=3D1hum44k3ai1u1801&from=3Dja =0AUnsubscrib=
+e from this email: https://subscriptions.indeed.com/alerts/cancel=3Ftoken=
+=3DCkCzspG7Oc5OXDZrT1Pd7k7qZc4qzjgNLx0mjKP1EAb2sks5d6240cuFS1OCQxxib5Ys52ip=
+fusDCmcz_NN5YC6NEiAdc18oxEwyZUYJ461SrflESr9O9gNBrZYhLzoJDX3AARoQcWyQ2lWEVzi=
+4hFMRqqhm4Q%3D%3D&co=3DCA&hl=3Den&tmtk=3D1hum44k3ai1u1801&subId=3D65a15aea1=
+01c1f4981457f9f&rgtk=3D1hum44ljhpbv4804&from=3Dja
+--_----IyzJhNaunIDBeUPmiCnxNQ===_18/D0-35342-C56F0566
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset="UTF-8"
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.=
+w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">=0A    <html lang=3D"en" xmln=
+s=3D"http://www.w3.org/1999/xhtml" xmlns:v=3D"urn:schemas-microsoft-com:vml=
+" xmlns:o=3D"urn:schemas-microsoft-com:office:office"><head><title>Indeed J=
+ob Alerts Email</title><meta http-equiv=3D"Content-Type" content=3D"text/ht=
+ml; charset=3Dutf-8"/><meta name=3D"viewport" content=3D"width=3Ddevice-wid=
+th, initial-scale=3D1"/><meta http-equiv=3D"X-UA-Compatible" content=3D"IE=
+=3Dedge"/><style type=3D"text/css">=0A    /* CLIENT-SPECIFIC STYLES */=0A  =
+  body, table, td, a { -webkit-text-size-adjust: 100%; -ms-text-size-adjust=
+: 100%;}=0A    table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; }=
+=0A    img { -ms-interpolation-mode: bicubic; }=0A=0A    /* RESET STYLES */=
+=0A    img { border: 0; height: auto; line-height: 100%; outline: none; tex=
+t-decoration: none; }=0A    table { border-collapse: collapse !important; }=
+=0A    body { height: 100% !important; Margin: 0 !important; padding: 0 !im=
+portant; width: 100% !important; }=0A=0A    table, td, .notice, .downshift-=
+link {=0A        font-family:'Noto Sans', Helvetica, Arial, sans-serif !imp=
+ortant;=0A    }=0A=0A    .terms-link {=0A        color: #2557A7 !important;=
+=0A        font-size: 12px !important;=0A    }=0A    .footer-box a {=0A    =
+    font-size:12px !important;=0A    }=0A=0A    .cta a {=0A        width:29=
+8px !important;=0A    }=0A=0A    @media only screen and (max-width:530px) {=
+=0A        =0A    .indeed-logo .jecl-Icon-img {=0A        width: 84px !impo=
+rtant;=0A    }=0A        =0A        =0A    .r-v {=0A        line-height: 26=
+px !important;=0A        font-size: 20px !important;=0A    }=0A        =0A =
+       .r-0 {=0A            display: block !important;=0A            paddin=
+g: 0 !important;=0A            Margin: 0px 0 0 !important;=0A        }=0A  =
+      .r-1, .r-2, .r-3, .r-4 {=0A            display: block !important;=0A =
+           padding: 0 !important;=0A            Margin: 32px 0 0 !important=
+;=0A        }=0A        .r-5 {=0A            display: none !important;=0A  =
+      }=0A        .r-6 br {=0A            display: none !important;=0A     =
+   }=0A    =0A        =0A        =0A    .r-a {=0A        padding: 24px 0 0 =
+!important;=0A    }=0A        =0A    .r-x {=0A        padding: 0 16px 32px =
+!important;=0A    }=0A        =0A    .r-w {=0A        padding: 24px 16px 16=
+px !important;=0A    }=0A        =0A        =0A    .r-m {=0A        padding=
+: 0px 0px 24px !important;=0A    }=0A        =0A    .r-l {=0A        font-s=
+ize: 16px !important;=0A    }=0A    =0A=0A    }=0A=0A    @media only screen=
+ and (max-width:530px) {=0A        #responsive_css_ping {=0A            bac=
+kground-image: url(https://subscriptions.indeed.com/imgping=3Faluidhash=3D0=
+560e1628cda446a049f928fc50deb52&alert=3D65a15aea101c1f4981457f9f&tk=3D1hum4=
+4k3ai1u1801&type=3Djaresponsive);=0A        }=0A=0A        .outer-box {=0A =
+           padding:0 8px !important;=0A        }=0A=0A        .content-box =
+{=0A            padding:32px 16px 0 !important;=0A        }=0A=0A        .h=
+as-downshift-content-box {=0A            padding:16px 16px 0px !important;=
+=0A        }=0A=0A        .cta a, .prominent-promo a {=0A            width:=
+100% !important;=0A            box-sizing:border-box !important;=0A        =
+}=0A=0A        .show-when-mobile {=0A            display: block!important;=
+=0A            max-height:none !important;=0A        }=0A=0A        .promin=
+ent-promo-container {=0A            padding-bottom: 0 !important;=0A       =
+ }=0A        .prominent-promo {=0A            display: block !important;=0A=
+            width: 100% !important;=0A            padding: 0 0 16px !import=
+ant;=0A        }=0A=0A        .prominent-promo a {=0A            display: b=
+lock !important;=0A        }=0A        /* Targeting Gmail/Inbox */=0A      =
+  u + #body a {=0A            color: inherit;=0A            text-decoration=
+: none;=0A        }=0A    }=0A=0A    @media only screen and (max-width: 414=
+px) {=0A        u ~ div .main {=0A            min-width: 100vw;=0A        }=
+=0A    }=0A    =0A    @media only screen and (min-width:530px) {=0A        =
+.hide-when-desktop {=0A            display:none !important;=0A        }=0A=
+    }=0A    =0A    </style><!--[if gte mso 9]><xml> <o:OfficeDocumentSettin=
+gs> <o:AllowPNG/> <o:PixelsPerInch>96</o:PixelsPerInch> </o:OfficeDocumentS=
+ettings> </xml><![endif]--> <!--[if !mso]> <!----><style type=3D"text/css">=
+@import url('https://fonts.googleapis.com/css2=3Ffamily=3DNoto+Sans:wght@40=
+0;700&display=3Dswap')</style><!-- <![endif]--><style type=3D"text/css">@im=
+port url('https://prod.statics.indeed.com/ds/assets/typography/indeedsans/v=
+1/indeedsans.css')</style></head><body id=3D"body" class=3D"body" style=3D"=
+background-color:#F3F2F1;Margin:0;padding:0"><div style=3D"display:none;max=
+-height:0px;overflow:hidden">Apply to jobs at NAV Canada and Bank of Canada=
+ </div><div style=3D"display:none;max-height:0px;overflow:hidden">=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C =C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0 =E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0 =C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C =C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0 =
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0 =C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C =C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0 =E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0 =E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0 =E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0 =
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0</div><div id=
+=3D"responsive_css_ping"></div><div class=3D"full-wrap" style=3D"font-famil=
+y:'Noto Sans', Helvetica, Arial, sans-serif;direction:ltr"><img alt=3D"" sr=
+c=3D"https://subscriptions.indeed.com/imgping=3Ftype=3Dja&tk=3D1hum44k3ai1u=
+1801&&aluidhash=3D65a15aea101c1f4981457f9f" style=3D"height:1.25rem;width:1=
+px"/><table class=3D"main" width=3D"100%" cellPadding=3D"0" cellSpacing=3D"=
+0" style=3D"background-color:#F3F2F1" border=3D"0"><tr><td class=3D"outer-b=
+ox" style=3D"background-color:#F3F2F1;padding:0 8px" align=3D"center"><!--[=
+if (gte mso 9)|(IE)]> <table width=3D"600" border=3D"0" cellspacing=3D"0" c=
+ellpadding=3D"0"> <tr> <td> <![endif]--><table width=3D"100%" cellPadding=
+=3D"0" cellSpacing=3D"0" style=3D"max-width:600px;padding:0 0 15px 0;Margin=
+-top:24px;border:0"><tr><td align=3D"LEFT" style=3D"padding:0 0 13px 0" cla=
+ss=3D"indeed-logo-left jecl-Icon-wrapper"><a href=3D"https://clk.indeed.com=
+/hp=3Fco=3DCA&utm_campaign=3Djob_alerts&utm_medium=3Demail&utm_source=3Djob=
+seeker_emails&from=3Dja&tk=3D1hum44k3ai1u1801"><img class=3D"jecl-Icon-img"=
+ src=3D"https://subscriptions.indeed.com/static/images/logos/indeed_retina@=
+2x.png" alt=3D"Indeed homepage" width=3D"100" style=3D"display:block"/></a>=
+</td><td class=3D"r-y" style=3D"width:44px"><a href=3D"https://clk.indeed.c=
+om/messages=3Ftk=3D1hum44k3ai1u1801&co=3DCA&hl=3Den"><img style=3D"width:44=
+px" src=3D"https://subscriptions.indeed.com/static/images/ja/icon-messages-=
+aurora-updated.png" alt=3D"see messages" width=3D"44"/></a></td><td class=
+=3D"r-z" style=3D"padding:0 0 0 10px;width:44px"><a href=3D"https://clk.ind=
+eed.com/notifications=3Ffrom=3Dja&tk=3D1hum44k3ai1u1801&co=3DCA&hl=3Den"><i=
+mg style=3D"width:44px" src=3D"https://subscriptions.indeed.com/static/imag=
+es/ja/icon-notification-aurora.png" alt=3D"see notifications" width=3D"44"/=
+></a></td></tr></table><table class=3D"width-600" style=3D"max-width:600px;=
+background-color:#FFFFFF" width=3D"100%" cellPadding=3D"0" cellSpacing=3D"0=
+" border=3D"0"><tr><td class=3D"content-box" style=3D"padding:50px 50px 0">=
+<table width=3D"100%" cellPadding=3D"0" cellSpacing=3D"0" border=3D"0"><tr>=
+<td><table class=3D"job-alerts" width=3D"100%" cellPadding=3D"0" cellSpacin=
+g=3D"0"><tr><td class=3D"section-header"><table width=3D"100%" cellPadding=
+=3D"0" cellSpacing=3D"0"><tr><td><table width=3D"100%" cellPadding=3D"0" ce=
+llSpacing=3D"0"><tr><td><h1 align=3D"center" style=3D"align:center;color:#2=
+D2D2D;font-family:'Noto Sans', Helvetica, Arial, sans-serif;font-size:28px;=
+font-weight:bold;line-height:36px;Margin:0" class=3D"r-v">3 new cybersecuri=
+ty analyst opportunities in Ottawa, ON</h1></td></tr><tr><td style=3D"paddi=
+ng:16px 0 24px"><p class=3D"r-11" align=3D"center" style=3D"font-family:'No=
+to Sans', Helvetica, Arial, sans-serif;font-size:14px;line-height:20px;colo=
+r:#767676;Margin:0">These job ads match your saved job alert &sup1;</p></td=
+></tr><tr><td style=3D"border-bottom:1px solid #E4E2E0;font-size:1px;Margin=
+:0">&nbsp;</td></tr></table></td></tr></table></td></tr></table></td></tr><=
+/table></td></tr><tr><td class=3D"r-w" style=3D"padding:24px 50px 16px"><ta=
+ble width=3D"100%" cellPadding=3D"0" cellSpacing=3D"0" style=3D"border-widt=
+h:0"><tr><td style=3D"padding:0px 0px 32px" class=3D"r-m" align=3D"left"><a=
+ href=3D"https://ca.indeed.com/rc/clk/dl=3Fjk=3D70476212c6e69c56&from=3Dja&=
+qd=3DRnZhMybXSk4M3QtTVGXWoX6pZRaEo22AT5xy2gTKw41Q9nTKmOUPniAR8eLKyC6N0wrMAg=
+cEtFQX8hcHmhb-emqNNetQ5RBDvfzhxoeKRdA&rd=3DEvLisMDFuvoFoCasnNPvI1_MKnaSAFGA=
+sD6kfERFt3g&tk=3D1hum44k3ai1u1801&alid=3D65a15aea101c1f4981457f9f&bb=3DQULi=
+pIB34PYas2Di7MphMRvASctfdRx2v6gxQfU0jGrhC5ASXBv4sYstGlvB6KxfYJIH2EPn9ieQXeg=
+EB3asQavSyvc0I8S9EwJw3zyOS99X0usKhgSBQBARGANOBt6UkyRTZ1hz80wf-iVoqj82YA%3D%=
+3D" style=3D"display:block;text-decoration:none"><table width=3D"100%" cell=
+Padding=3D"0" cellSpacing=3D"0" style=3D"font-family:'Noto Sans', Helvetica=
+, Arial, sans-serif" role=3D"presentation"><tr><td class=3D"r-l" style=3D"p=
+adding:0 0 4px" align=3D"left"><a href=3D"https://ca.indeed.com/rc/clk/dl=
+=3Fjk=3D70476212c6e69c56&from=3Dja&qd=3DRnZhMybXSk4M3QtTVGXWoX6pZRaEo22AT5x=
+y2gTKw41Q9nTKmOUPniAR8eLKyC6N0wrMAgcEtFQX8hcHmhb-emqNNetQ5RBDvfzhxoeKRdA&rd=
+=3DEvLisMDFuvoFoCasnNPvI1_MKnaSAFGAsD6kfERFt3g&tk=3D1hum44k3ai1u1801&alid=
+=3D65a15aea101c1f4981457f9f&bb=3DQULipIB34PYas2Di7MphMRvASctfdRx2v6gxQfU0jG=
+rhC5ASXBv4sYstGlvB6KxfYJIH2EPn9ieQXegEB3asQavSyvc0I8S9EwJw3zyOS99X0usKhgSBQ=
+BARGANOBt6UkyRTZ1hz80wf-iVoqj82YA%3D%3D" style=3D"display:block;text-decora=
+tion:underline;font-size:16px;font-family:'Noto Sans', Helvetica, Arial, sa=
+ns-serif;line-height:20px;font-weight:bold;color:#2D2D2D">Infrastructure An=
+alyst</a></td></tr><tr><td class=3D"r-o" align=3D"left" style=3D"font-famil=
+y:'Noto Sans', Helvetica, Arial, sans-serif;font-size:14px;line-height:20px=
+;font-weight:400;color:#2D2D2D;padding:0 0 4px"><span class=3D"r-p" style=
+=3D"font-size:14px;line-height:20px;font-weight:700;color:#2D2D2D">NAV Cana=
+da=C2=A0</span><span class=3D"jecl-jc-companyRating" style=3D"white-space:n=
+owrap;color:#2D2D2D;font-size:14px;line-height:16px">=C2=A04</span><span>=
+=C2=A0<img class=3D"jecl-starreview-companyReviewStars" src=3D"https://subs=
+criptions.indeed.com/static/images/ja/star_aurora_grey.png" width=3D"14" bo=
+rder=3D"0" alt=3D"4/5 rating"/>=C2=A0</span><span class=3D"r-q" style=3D"di=
+splay:inline !important;color:#767676;font-size:14px">- Ottawa, ON</span></=
+td></tr><tr><td class=3D"r-u" style=3D"font-family:'Noto Sans', Helvetica, =
+Arial, sans-serif;color:#2D2D2D;font-size:14px;line-height:20px;padding:0 0=
+ 4px">$107,682 - $135,272 a year</td></tr><tr><td class=3D"r-n" align=3D"le=
+ft" style=3D"font-size:14px;line-height:20px;font-family:'Noto Sans', Helve=
+tica, Arial, sans-serif;color:#595959;padding:0 0 4px">Knowledge of cyberse=
+curity considerations in infrastructure technologies, systems, and services=
+. Participates in the work involved in the planning, development,=E2=80=A6=
+</td></tr><tr><td class=3D"r-s" style=3D"font-family:'Noto Sans', Helvetica=
+, Arial, sans-serif;color:#767676;font-size:14px;line-height:20px;padding:0=
+ 4px 0 0">2 days ago</td></tr></table></a></td></tr><tr><td style=3D"paddin=
+g:0px 0px 32px" class=3D"r-m" align=3D"left"><a href=3D"https://ca.indeed.c=
+om/pagead/clk/dl=3Fmo=3Dr&ad=3D-6NYlbfkN0BTlVOecmu7vzuMx0kgVGlE9ftidFsEsAB-=
+wXc2EdpXUVCxxQiQ93o7_BjcfLQEyw-WFCJhF4HJngSTmy7ebuTmCKXmLYeEa7mL_Je279vqh1g=
+IghpwCq4gZe98PFn_fGg7tZI3ocGY0BX-UHHHdThjhJWBx6ibaWdXo8p-5GZUkuyrTw1lqEaKVM=
+G2xa1gCRuZrytUFxYN3M7cY3-xBbQSoK89dJkNkQlUZvABfjxVDATlVOejQD-v8wBdHTccpfEhL=
+OB4TkIFCDuAMAi32Dxrk3CjqntzOoWYYLn4AWOuW2geyy8irDGWgvLHWdvkIcmwyZTssxRsEDak=
+KVIgLJmKFgV6c2c534n0QwPaA7a7IGZGkT6sKQpBhE914c5meg3uXWeR5MWatvqneus-qvcxFJP=
+lq5j12eQ1kVikFJooDuuVS378jcXycnX9ebOW30MEj5uXQHhFHaLl5_-qqY9Z5--fuXpEHmepk5=
+q4c62oKc1K18obIQOgSVPTM7ddPci-1kVYBs3OR5iMseRlg3P7U0s0Z86oJmwlEQ1R-rtlY2YAF=
+UnTULi1ma-wk2mwfW7ltdKT6dVxfwTG-XZC1GabNEYlqGqB586kKflUrbLzGbprfnkwz05TVQ-w=
+tjxUUx4tWQKAejAHwiDE2euBjqmKKRDT8WcEDZcj6qC0V3eDVKwmjvr_tzdO3p_5zy9mJLo%3D&=
+xkcb=3DSoBn6_M3AWAdGlwTQx0KbzkdCdPP&camk=3D4HOcmqOLYrAFdubeOPdc3A%3D%3D&p=
+=3D0&jsa=3D9777&rjs=3D1&tmtk=3D1hum44k3ai1u1801&gdfvj=3D1&alid=3D65a15aea10=
+1c1f4981457f9f&fvj=3D1" style=3D"display:block;text-decoration:none"><table=
+ width=3D"100%" cellPadding=3D"0" cellSpacing=3D"0" style=3D"font-family:'N=
+oto Sans', Helvetica, Arial, sans-serif" role=3D"presentation"><tr><td clas=
+s=3D"r-l" style=3D"padding:0 0 4px" align=3D"left"><a href=3D"https://ca.in=
+deed.com/pagead/clk/dl=3Fmo=3Dr&ad=3D-6NYlbfkN0BTlVOecmu7vzuMx0kgVGlE9ftidF=
+sEsAB-wXc2EdpXUVCxxQiQ93o7_BjcfLQEyw-WFCJhF4HJngSTmy7ebuTmCKXmLYeEa7mL_Je27=
+9vqh1gIghpwCq4gZe98PFn_fGg7tZI3ocGY0BX-UHHHdThjhJWBx6ibaWdXo8p-5GZUkuyrTw1l=
+qEaKVMG2xa1gCRuZrytUFxYN3M7cY3-xBbQSoK89dJkNkQlUZvABfjxVDATlVOejQD-v8wBdHTc=
+cpfEhLOB4TkIFCDuAMAi32Dxrk3CjqntzOoWYYLn4AWOuW2geyy8irDGWgvLHWdvkIcmwyZTssx=
+RsEDakKVIgLJmKFgV6c2c534n0QwPaA7a7IGZGkT6sKQpBhE914c5meg3uXWeR5MWatvqneus-q=
+vcxFJPlq5j12eQ1kVikFJooDuuVS378jcXycnX9ebOW30MEj5uXQHhFHaLl5_-qqY9Z5--fuXpE=
+Hmepk5q4c62oKc1K18obIQOgSVPTM7ddPci-1kVYBs3OR5iMseRlg3P7U0s0Z86oJmwlEQ1R-rt=
+lY2YAFUnTULi1ma-wk2mwfW7ltdKT6dVxfwTG-XZC1GabNEYlqGqB586kKflUrbLzGbprfnkwz0=
+5TVQ-wtjxUUx4tWQKAejAHwiDE2euBjqmKKRDT8WcEDZcj6qC0V3eDVKwmjvr_tzdO3p_5zy9mJ=
+Lo%3D&xkcb=3DSoBn6_M3AWAdGlwTQx0KbzkdCdPP&camk=3D4HOcmqOLYrAFdubeOPdc3A%3D%=
+3D&p=3D0&jsa=3D9777&rjs=3D1&tmtk=3D1hum44k3ai1u1801&gdfvj=3D1&alid=3D65a15a=
+ea101c1f4981457f9f&fvj=3D1" style=3D"display:block;text-decoration:underlin=
+e;font-size:16px;font-family:'Noto Sans', Helvetica, Arial, sans-serif;line=
+-height:20px;font-weight:bold;color:#2D2D2D">Senior Information Security An=
+alyst</a></td></tr><tr><td class=3D"r-o" align=3D"left" style=3D"font-famil=
+y:'Noto Sans', Helvetica, Arial, sans-serif;font-size:14px;line-height:20px=
+;font-weight:400;color:#2D2D2D;padding:0 0 4px"><span class=3D"r-p" style=
+=3D"font-size:14px;line-height:20px;font-weight:700;color:#2D2D2D">Buchanan=
+ Technologies=C2=A0</span><span class=3D"jecl-jc-companyRating" style=3D"wh=
+ite-space:nowrap;color:#2D2D2D;font-size:14px;line-height:16px">=C2=A03.5</=
+span><span>=C2=A0<img class=3D"jecl-starreview-companyReviewStars" src=3D"h=
+ttps://subscriptions.indeed.com/static/images/ja/star_aurora_grey.png" widt=
+h=3D"14" border=3D"0" alt=3D"3.5/5 rating"/>=C2=A0</span><span class=3D"r-q=
+" style=3D"display:inline !important;color:#767676;font-size:14px">- Ottawa=
+, ON</span></td></tr><tr><td class=3D"r-u" style=3D"font-family:'Noto Sans'=
+, Helvetica, Arial, sans-serif;color:#2D2D2D;font-size:14px;line-height:20p=
+x;padding:0 0 4px">$90 - $100 an hour</td></tr><tr><td style=3D"font-size:1=
+4px;line-height:20px;color:#2D2D2D;padding:0 0 4px"><img style=3D"vertical-=
+align:middle;padding:0 4px 2px 0" src=3D"https://subscriptions.indeed.com/s=
+tatic/images/ja/icon-easily-apply.png" alt=3D"" width=3D"20"/>Easily apply<=
+/td></tr><tr><td class=3D"r-n" align=3D"left" style=3D"font-size:14px;line-=
+height:20px;font-family:'Noto Sans', Helvetica, Arial, sans-serif;color:#59=
+5959;padding:0 0 4px">Improve cybersecurity processes and documentation. De=
+velop cybersecurity metrics, measurement criteria, and reporting to ensure =
+compliance and continuous=E2=80=A6</td></tr><tr><td class=3D"r-s" style=3D"=
+font-family:'Noto Sans', Helvetica, Arial, sans-serif;color:#767676;font-si=
+ze:14px;line-height:20px;padding:0 4px 0 0">Just posted</td></tr></table></=
+a></td></tr><tr><td style=3D"padding:0px 0px 32px" class=3D"r-m" align=3D"l=
+eft"><a href=3D"https://ca.indeed.com/rc/clk/dl=3Fjk=3D354970960024e085&fro=
+m=3Dja&qd=3DRnZhMybXSk4M3QtTVGXWoX6pZRaEo22AT5xy2gTKw41Q9nTKmOUPniAR8eLKyC6=
+N0wrMAgcEtFQX8hcHmhb-emqNNetQ5RBDvfzhxoeKRdA&rd=3DFzlTg_mIv5FOCOtUGrVy1F_MK=
+naSAFGAsD6kfERFt3g&tk=3D1hum44k3ai1u1801&alid=3D65a15aea101c1f4981457f9f&bb=
+=3Dc6qmzqMprOc0V9c_O5tie3y4Z0Dq8TUhelG7vwRR_vXAn9OyEs3zt8HD_MYsrdNT0iXGEfqP=
+GZuwBU5MZzFGdgHJb_DL5gK08g0noRQz6N1HNJklWmTQgTDrQSK-Gi4S7KiP-t5xP53td7F603T=
+K-w%3D%3D" style=3D"display:block;text-decoration:none"><table width=3D"100=
+%" cellPadding=3D"0" cellSpacing=3D"0" style=3D"font-family:'Noto Sans', He=
+lvetica, Arial, sans-serif" role=3D"presentation"><tr><td class=3D"r-l" sty=
+le=3D"padding:0 0 4px" align=3D"left"><a href=3D"https://ca.indeed.com/rc/c=
+lk/dl=3Fjk=3D354970960024e085&from=3Dja&qd=3DRnZhMybXSk4M3QtTVGXWoX6pZRaEo2=
+2AT5xy2gTKw41Q9nTKmOUPniAR8eLKyC6N0wrMAgcEtFQX8hcHmhb-emqNNetQ5RBDvfzhxoeKR=
+dA&rd=3DFzlTg_mIv5FOCOtUGrVy1F_MKnaSAFGAsD6kfERFt3g&tk=3D1hum44k3ai1u1801&a=
+lid=3D65a15aea101c1f4981457f9f&bb=3Dc6qmzqMprOc0V9c_O5tie3y4Z0Dq8TUhelG7vwR=
+R_vXAn9OyEs3zt8HD_MYsrdNT0iXGEfqPGZuwBU5MZzFGdgHJb_DL5gK08g0noRQz6N1HNJklWm=
+TQgTDrQSK-Gi4S7KiP-t5xP53td7F603TK-w%3D%3D" style=3D"display:block;text-dec=
+oration:underline;font-size:16px;font-family:'Noto Sans', Helvetica, Arial,=
+ sans-serif;line-height:20px;font-weight:bold;color:#2D2D2D">Security Risk =
+Analyst</a></td></tr><tr><td class=3D"r-o" align=3D"left" style=3D"font-fam=
+ily:'Noto Sans', Helvetica, Arial, sans-serif;font-size:14px;line-height:20=
+px;font-weight:400;color:#2D2D2D;padding:0 0 4px"><span class=3D"r-p" style=
+=3D"font-size:14px;line-height:20px;font-weight:700;color:#2D2D2D">Bank of =
+Canada=C2=A0</span><span class=3D"jecl-jc-companyRating" style=3D"white-spa=
+ce:nowrap;color:#2D2D2D;font-size:14px;line-height:16px">=C2=A04</span><spa=
+n>=C2=A0<img class=3D"jecl-starreview-companyReviewStars" src=3D"https://su=
+bscriptions.indeed.com/static/images/ja/star_aurora_grey.png" width=3D"14" =
+border=3D"0" alt=3D"4/5 rating"/>=C2=A0</span><span class=3D"r-q" style=3D"=
+display:inline !important;color:#767676;font-size:14px">- Ottawa, ON</span>=
+</td></tr><tr><td align=3D"left" style=3D"font-size:14px;line-height:20px;f=
+ont-weight:400;color:#4B4B4B">Hybrid remote</td></tr><tr><td class=3D"r-n" =
+align=3D"left" style=3D"font-size:14px;line-height:20px;font-family:'Noto S=
+ans', Helvetica, Arial, sans-serif;color:#595959;padding:0 0 4px">Knowledge=
+ of information security, cybersecurity, and technology risks (including fr=
+ameworks such as NIST and ISO). What you need to succeed.</td></tr><tr><td =
+class=3D"r-s" style=3D"font-family:'Noto Sans', Helvetica, Arial, sans-seri=
+f;color:#767676;font-size:14px;line-height:20px;padding:0 4px 0 0">Just pos=
+ted</td></tr></table></a></td></tr></table></td></tr><tr><td class=3D"r-x" =
+style=3D"padding:0 50px 32px"><table cellPadding=3D"0" cellSpacing=3D"0" st=
+yle=3D"width:100%;border:0;border-spacing:0"><tr><td valign=3D"top"><div al=
+ign=3D"center"> <!--[if mso]><v:roundrect xmlns:v=3D"urn:schemas-microsoft-=
+com:vml" xmlns:w=3D"urn:schemas-microsoft-com:office:word" href=3D"https://=
+ca.indeed.com/jobs=3Fq=3Dcybersecurity+analyst&hl=3Den&from=3Dja&l=3DOttawa=
+%2C+ON&radius=3D50&alid=3D65a15aea101c1f4981457f9f&tmtk=3D1hum44k3ai1u1801&=
+utm_campaign=3Djob_alerts&utm_medium=3Demail&utm_source=3Djobseeker_emails&=
+of=3D1&fr=3Dt" title=3D"link to view all jobs" style=3D"height:48px; width:=
+304px; v-text-anchor: middle;" arcsize=3D"228%" strokecolor=3D"#FFFFFF" str=
+okeweight=3D"1.5pt" fillcolor=3D"#2557A7" > <w:anchorlock/> <center style=
+=3D"color:#FFFFFF; font-family:'Noto Sans', Helvetica, Arial, sans-serif; f=
+ont-size:16px; font-weight:bold;"> View all jobs </center> </v:roundrect><!=
+[endif]--> <a class=3D"" href=3D"https://ca.indeed.com/jobs=3Fq=3Dcybersecu=
+rity+analyst&hl=3Den&from=3Dja&l=3DOttawa%2C+ON&radius=3D50&alid=3D65a15aea=
+101c1f4981457f9f&tmtk=3D1hum44k3ai1u1801&utm_campaign=3Djob_alerts&utm_medi=
+um=3Demail&utm_source=3Djobseeker_emails&of=3D1&fr=3Dt" style=3D"mso-hide:a=
+ll;background-color:#2557A7;border:#FFFFFF solid 2px;border-radius:8px;colo=
+r:#FFFFFF;display:inline-block;font-family:'Noto Sans', Helvetica, Arial, s=
+ans-serif;font-size:16px;font-weight:bold;line-height:48px;text-align:cente=
+r;text-decoration:none;width:304px;height:48px;-webkit-text-size-adjust:non=
+e">View all jobs</a></div></td></tr><tr><td class=3D"r-a" style=3D"padding:=
+24px 48px 0"><p align=3D"center" style=3D"font-size:14px;color:#2D2D2D;Marg=
+in:0">View jobs: <a href=3D"https://ca.indeed.com/jobs=3Fq=3Dcybersecurity+=
+analyst&hl=3Den&from=3Dja&l=3DOttawa%2C+ON&radius=3D50&alid=3D65a15aea101c1=
+f4981457f9f&tmtk=3D1hum44k3ai1u1801&utm_campaign=3Djob_alerts&utm_medium=3D=
+email&utm_source=3Djobseeker_emails&of=3D1&fr=3Db&fromage=3D1" style=3D"col=
+or:#2557A7;font-size:14px;font-weight:normal;text-decoration:underline">sin=
+ce yesterday</a> - <a href=3D"https://ca.indeed.com/jobs=3Fq=3Dcybersecurit=
+y+analyst&hl=3Den&from=3Dja&l=3DOttawa%2C+ON&radius=3D50&alid=3D65a15aea101=
+c1f4981457f9f&tmtk=3D1hum44k3ai1u1801&utm_campaign=3Djob_alerts&utm_medium=
+=3Demail&utm_source=3Djobseeker_emails&of=3D1&fr=3Db&fromage=3D7" style=3D"=
+color:#2557A7;font-size:14px;font-weight:normal;text-decoration:underline">=
+for last 7 days</a></p></td></tr></table></td></tr></table><table><tr><td><=
+table class=3D"hide-when-desktop" width=3D"100%" cellPadding=3D"0" cellSpac=
+ing=3D"0" role=3D"presentation" border=3D"0"><tbody><tr><td style=3D"max-wi=
+dth:600px;background-color:#FFFFFF"><table><tbody><tr><td style=3D"padding:=
+32px"><table><tbody><tr><td style=3D"vertical-align:top"><img width=3D"83" =
+height=3D"66" src=3D"https://subscriptions.indeed.com/static/images/ja/magu=
+a_device_usage1.png" alt=3D""/></td><td style=3D"padding-left:28px;color:#2=
+D2D2D"><table><tbody><tr><td style=3D"font-weight:700;font-size:20px">Don=
+=E2=80=99t miss out on important job updates with the app</td></tr><tr><td =
+style=3D"font-weight:400;font-size:16px;color:#595959">Indeed mobile app ma=
+kes your job search easier with timely notifications and personalized recom=
+mendations.</td></tr><tr><td><table><tbody><tr><td style=3D"padding-top:16p=
+x"><table><tbody><tr><td><a href=3D"https://indeed.onelink.me/oo1Z=3Faf_xp=
+=3Dcustom&pid=3Demail&c=3Djobalerts&af_adset=3Dmagua_jobalerts_app_promo_ts=
+t1&utm_source=3Djobalerts&utm_medium=3Demail&utm_campaign=3Dmagua_jobalerts=
+_app_promo_tst1&targetUrl=3Dhttps%3A%2F%2Fwww.indeed.com%2Fm%3Futm_source%3=
+Djobalerts%26utm_medium%3Demail%26utm_campaign%3Dmagua_jobalerts_app_promo_=
+tst1"><img width=3D"132" height=3D"44" src=3D"https://subscriptions.indeed.=
+com/static/images/ja/magua_app_store.png" alt=3D"Link to install the Indeed=
+ app"/></a></td><td style=3D"padding-left:12px"><a href=3D"https://indeed.o=
+nelink.me/oo1Z=3Faf_xp=3Dcustom&pid=3Demail&c=3Djobalerts&af_adset=3Dmagua_=
+jobalerts_app_promo_tst1&utm_source=3Djobalerts&utm_medium=3Demail&utm_camp=
+aign=3Dmagua_jobalerts_app_promo_tst1&targetUrl=3Dhttps%3A%2F%2Fwww.indeed.=
+com%2Fm%3Futm_source%3Djobalerts%26utm_medium%3Demail%26utm_campaign%3Dmagu=
+a_jobalerts_app_promo_tst1"><img width=3D"149" height=3D"44" src=3D"https:/=
+/subscriptions.indeed.com/static/images/ja/magua_google_play.png" alt=3D"Li=
+nk to install the Indeed app"/></a></td></tr></tbody></table></td></tr></tb=
+ody></table></td></tr></tbody></table></td></tr></tbody></table></td></tr><=
+/tbody></table></td></tr></tbody></table></td></tr></table><table class=3D"=
+width-550" width=3D"100%" cellPadding=3D"0" cellSpacing=3D"0" style=3D"max-=
+width:550px;background-color:#F2F2F2;border:0"><tr><td class=3D"footer-box"=
+ style=3D"padding:24px 4px"><table cellPadding=3D"0" cellSpacing=3D"0" styl=
+e=3D"max-width:425px;border:0" align=3D"center"><tr><td align=3D"center"><a=
+ href=3D"https://subscriptions.indeed.com/update/65a15aea101c1f4981457f9f=
+=3Ftoken=3DCkCzspG7Oc5OXDZrT1Pd7k7qZc4qzjgNLx0mjKP1EAb2sks5d6240cuFS1OCQxxi=
+b5Ys52ipfusDCmcz_NN5YC6NEiAdc18oxEwyZUYJ461SrflESr9O9gNBrZYhLzoJDX3AARoQcWy=
+Q2lWEVzi4hFMRqqhm4Q%3D%3D&co=3DCA&hl=3Den&tmtk=3D1hum44k3ai1u1801&from=3Dja=
+EditAlert" style=3D"align:CENTER;color:#2557A7;font-family:'Noto Sans', Hel=
+vetica, Arial, sans-serif;font-size:12px;font-weight:normal;letter-spacing:=
+-0.12px;line-height:36px;padding:0 0 20px;text-decoration:underline">Edit t=
+his job alert</a></td></tr><tr><td class=3D"jecl-Disclaimer-text" align=3D"=
+center" style=3D"font-family:'Noto Sans', Helvetica, Arial, sans-serif;font=
+-size:12px;line-height:16px;color:#424242;padding:32px 0 0;Margin:0 auto"><=
+strong>Do not share this email</strong></td></tr><tr><td class=3D"jecl-Disc=
+laimer-text" align=3D"center" style=3D"font-family:'Noto Sans', Helvetica, =
+Arial, sans-serif;font-size:12px;line-height:16px;color:#424242;padding:0;M=
+argin:0 auto">This email contains secure links that are personalized to you=
+. Please do not share this email or links with others.</td></tr><tr><td cl=
+ass=3D"jecl-Disclaimer-text" align=3D"center" style=3D"font-family:'Noto Sa=
+ns', Helvetica, Arial, sans-serif;font-size:12px;line-height:16px;color:#42=
+4242;padding:32px 0 0;Margin:0 auto">Salaries estimated if unavailable. Whe=
+n a job posting doesn't include a salary, we estimate it by looking at simi=
+lar jobs. Estimated salaries are not endorsed by the companies offering tho=
+se positions and may vary from actual salaries.</td></tr><tr><td class=3D"j=
+ecl-Disclaimer-text" align=3D"center" style=3D"font-family:'Noto Sans', Hel=
+vetica, Arial, sans-serif;font-size:12px;line-height:16px;color:#424242;pad=
+ding:32px 0 0;Margin:0 auto">&sup1; Displayed here are Job Ads that match t=
+he Job Alert query you saved. Indeed may be compensated by these employers,=
+ helping keep Indeed free for job seekers. Indeed ranks Job Ads based on a =
+combination of employer bids and relevance, such as your search terms and o=
+ther activity on Indeed. For more information, see the <a class=3D"terms-li=
+nk" href=3D"https://ca.indeed.com/legal=3Fhl=3Den">Indeed Terms of Service<=
+/a></td></tr></table><table class=3D"jecl-Footer" width=3D"100%" cellPaddin=
+g=3D"0" cellSpacing=3D"0" style=3D"font-size:12px;color:#424242;line-height=
+:22px;Margin:0 auto;border:0"><tr><td class=3D"r-7" lang=3D"en" align=3D"ce=
+nter" style=3D"padding:48px 0px 0px">=C2=A9 2024 Indeed Ireland Operations,=
+ Ltd.</td></tr><tr><td class=3D"r-8" lang=3D"en" align=3D"center" style=3D"=
+padding:0px">Indeed Ireland Operations Limited, Block B, Capital Dock, 80 S=
+ir John Rogerson's Quay, Grand Canal Dock, Dublin, 2, D02 HE36</td></tr><tr=
+><td class=3D"r-6" align=3D"center" style=3D"padding:48px 0px 64px"><a href=
+=3D"https://ca.indeed.com/legal=3Fhl=3Den#privacy" title=3D"Privacy Policy"=
+ style=3D"color:#2557A7;text-decoration:underline" class=3D"r-0">Privacy Po=
+licy</a><span class=3D"r-5"> | </span><a href=3D"https://ca.indeed.com/lega=
+l=3Fhl=3Den" title=3D"Terms" style=3D"color:#2557A7;text-decoration:underli=
+ne" class=3D"r-1">Terms</a><span class=3D"r-5"> | </span><a href=3D"https:/=
+/support.indeed.com/hc/en-ca" title=3D"Help Centre" style=3D"color:#2557A7;=
+text-decoration:underline" class=3D"r-2">Help Centre</a><br/><a href=3D"htt=
+ps://subscriptions.indeed.com=3Ftoken=3DCkCzspG7Oc5OXDZrT1Pd7k7qZc4qzjgNLx0=
+mjKP1EAb2sks5d6240cuFS1OCQxxib5Ys52ipfusDCmcz_NN5YC6NEiAdc18oxEwyZUYJ461Srf=
+lESr9O9gNBrZYhLzoJDX3AARoQcWyQ2lWEVzi4hFMRqqhm4Q%3D%3D&co=3DCA&hl=3Den&tmtk=
+=3D1hum44k3ai1u1801&from=3Dja" title=3D"Manage email settings" style=3D"col=
+or:#2557A7;text-decoration:underline" class=3D"r-3">Manage email settings</=
+a><span class=3D"r-5"> | </span><a href=3D"https://subscriptions.indeed.com=
+/alerts/cancel=3Ftoken=3DCkCzspG7Oc5OXDZrT1Pd7k7qZc4qzjgNLx0mjKP1EAb2sks5d6=
+240cuFS1OCQxxib5Ys52ipfusDCmcz_NN5YC6NEiAdc18oxEwyZUYJ461SrflESr9O9gNBrZYhL=
+zoJDX3AARoQcWyQ2lWEVzi4hFMRqqhm4Q%3D%3D&co=3DCA&hl=3Den&tmtk=3D1hum44k3ai1u=
+1801&subId=3D65a15aea101c1f4981457f9f&rgtk=3D1hum44ljhpbv4804&from=3Dja" ti=
+tle=3D"Unsubscribe from this email" style=3D"color:#2557A7;text-decoration:=
+underline" class=3D"r-4">Unsubscribe from this email</a></td></tr></table><=
+/td></tr></table><!--[if (gte mso 9)|(IE)]> </td> </tr> </table> <![endif]-=
+-></td></tr></table><img alt=3D"" src=3D"https://subscriptions.indeed.com/i=
+mgping=3Ftype=3Djafull&tk=3D1hum44k3ai1u1801&aluidhash=3D65a15aea101c1f4981=
+457f9f&clipped=3Dfalse" style=3D"height:1.25rem;width:1px"/></div></body></=
+html>
+--_----IyzJhNaunIDBeUPmiCnxNQ===_18/D0-35342-C56F0566--
+
