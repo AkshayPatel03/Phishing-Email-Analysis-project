@@ -35,8 +35,8 @@ Here's a detailed report template for a phishing email attack, based on your sce
 
 **Email Details**:
 
-- **Sender Address**: fake-sender@phishing.com
-- **Subject Line**: "Claim Your $2000 Costco Gift Voucher Now!"
+- **Sender Address**: support@gxamodm.ep-dev.cloudops.globe.com.ph
+- **Subject Line**: "Re: Akkip Second Attempt for #Akkip's $1000 Costco Gift Card"
 - **Email Body**:
   ```
   Congratulations! You have been selected to receive a $2000 Costco gift voucher. Click the link below to claim your reward.
