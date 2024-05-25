@@ -29,4 +29,15 @@ Examine email headers to identify suspicious elements such as spoofed addresses,
 
 ```bash
 # Example script to extract email headers
-python scripts/extract_headers.py data/sample_emails/email1.eml
+python3 scripts/extract-email-headers.py data/sample-emails/email1.eml
+```
+The Python scripts will be in the Scripts repository (File name: extract-email-headers.py)
+
+### Step 3: Email Body Analysis including URL and Attachment Analysis
+Analyze the content of the email body for malicious links, attachments, and social engineering tactics for malware and phishing pages.
+
+```bash
+# Example script to extract email body Analysis
+python3 scripts/analyse-email.py data/sample-emails/cotsco.eml
+```
+The Python scripts will be in the Scripts repository (File name: analyse-email.py)
