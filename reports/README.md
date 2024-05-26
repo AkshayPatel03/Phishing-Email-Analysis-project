@@ -56,6 +56,8 @@ This is a detailed report template for a phishing email attack, based on the sce
 - Utilized tools: MXToolbox, custom Python scripts.
 - Findings: The email originated from an IP address known for malicious activities. SPF, DKIM, and DMARC checks failed.
 
+![Email Health Analysis](images\costco-email-health.PNG)
+
 **Phishing Technique**: The email used social engineering tactics, leveraging the allure of a high-value reward to entice recipients to click on a malicious link.
 
 ## Impact Assessment
