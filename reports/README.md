@@ -44,7 +44,8 @@ This is a detailed report template for a phishing email attack, based on the sce
 
   [Confirm Here](https://storage.googleapis.com/dfg153erh35ef1gdr/dfgremjflmgr.html#idf2myzxq24u.wBnQbTVBgtjE?d9WJQVccW7rDcxKFkcdcWYc8cHC09dFq7cbbb5z)
   ```
-![Email Header Analysis](https://github.com/AkshayPatel03/Phishing-Email-Analysis-project/blob/b24bacf241cab1203afd72b48f54b6e6c9cf274b/images/body-cotsco.PNG)
+
+  ![Email Header Analysis](https://github.com/AkshayPatel03/Phishing-Email-Analysis-project/blob/b24bacf241cab1203afd72b48f54b6e6c9cf274b/images/body-cotsco.PNG)
 
 **Indicators of Compromise (IoCs)**:
 
@@ -56,7 +57,7 @@ This is a detailed report template for a phishing email attack, based on the sce
 - Utilized tools: MXToolbox, custom Python scripts.
 - Findings: The email originated from an IP address known for malicious activities. SPF, DKIM, and DMARC checks failed.
 
-### Email Health Analysis 
+### Email Health Analysis
 
 ![Email Health Analysis](https://github.com/AkshayPatel03/Phishing-Email-Analysis-project/blob/7dfbc42cfcdc7522753e95f442c845f371760519/images/costco-email-health.PNG)
 
@@ -64,16 +65,21 @@ This is a detailed report template for a phishing email attack, based on the sce
 
 ![Email Dmark fail](https://github.com/AkshayPatel03/Phishing-Email-Analysis-project/blob/67ded4a1fb0d68a3692ed3db0442ab6cb6b811e7/images/cotsco-dmark-fail.PNG)
 
-### Email Header Analysis 
+### Email Header Analysis
 
 ![Email Header analysis](https://github.com/AkshayPatel03/Phishing-Email-Analysis-project/blob/67ded4a1fb0d68a3692ed3db0442ab6cb6b811e7/images/email-header-analyse.PNG)
 
 ### SPK and DKIM errors
+
 ![SPF and DKIM errors](https://github.com/AkshayPatel03/Phishing-Email-Analysis-project/blob/67ded4a1fb0d68a3692ed3db0442ab6cb6b811e7/images/email-header-error-2.PNG)
 
 ### Email Server Blacklist
+
 ![Email Server Blacklisted](https://github.com/AkshayPatel03/Phishing-Email-Analysis-project/blob/67ded4a1fb0d68a3692ed3db0442ab6cb6b811e7/images/email-server-blacklisted.PNG)
 
+### Email Server Blacklist
+
+![Email Server Blacklisted](../images/email-server-blacklisted.PNG)
 
 **Phishing Technique**: The email used social engineering tactics, leveraging the allure of a high-value reward to entice recipients to click on a malicious link.
 
