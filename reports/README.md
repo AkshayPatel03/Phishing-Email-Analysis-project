@@ -44,6 +44,7 @@ This is a detailed report template for a phishing email attack, based on the sce
 
   [Confirm Here](https://storage.googleapis.com/dfg153erh35ef1gdr/dfgremjflmgr.html#idf2myzxq24u.wBnQbTVBgtjE?d9WJQVccW7rDcxKFkcdcWYc8cHC09dFq7cbbb5z)
   ```
+![Email Header Analysis](https://github.com/AkshayPatel03/Phishing-Email-Analysis-project/blob/b24bacf241cab1203afd72b48f54b6e6c9cf274b/images/body-cotsco.PNG)
 
 **Indicators of Compromise (IoCs)**:
 
