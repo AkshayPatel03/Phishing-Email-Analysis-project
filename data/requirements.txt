@@ -18,3 +18,7 @@ fabric
 pywinrm
 schedule
 dnspython
+keyboard
+pywin32
+paramiko
+datetime
