@@ -20,7 +20,9 @@ Phishing is a cyber attack that involves tricking email recipients into believin
 
 - **data/**: Contains sample phishing emails for analysis.
 - **scripts/**: Includes scripts for email analysis and automation.
+  Check out the [Python Scripts](https://github.com/AkshayPatel03/Phishing-Email-Analysis-project/tree/4b0e457731101d157430baa530dd0005ab5c68c6/scripts) for more information.
 - **reports/**: Generated reports from the analysis.
+Visit the [Reports](https://github.com/AkshayPatel03/Phishing-Email-Analysis-project/tree/4b0e457731101d157430baa530dd0005ab5c68c6/reports) for more information.
 - **images/**: Visual representations and diagrams.
 
 ## Analysis of Malicious Emails
