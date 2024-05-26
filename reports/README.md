@@ -56,7 +56,19 @@ This is a detailed report template for a phishing email attack, based on the sce
 - Utilized tools: MXToolbox, custom Python scripts.
 - Findings: The email originated from an IP address known for malicious activities. SPF, DKIM, and DMARC checks failed.
 
-![Email Health Analysis](images\costco-email-health.PNG)
+![Email Health Analysis](https://github.com/AkshayPatel03/Phishing-Email-Analysis-project/blob/7dfbc42cfcdc7522753e95f442c845f371760519/images/costco-email-health.PNG)
+
+![Email Health Analysis](https://github.com/AkshayPatel03/Phishing-Email-Analysis-project/blob/7dfbc42cfcdc7522753e95f442c845f371760519/images/costco-email-health.PNG)
+
+![Email Health Analysis](https://github.com/AkshayPatel03/Phishing-Email-Analysis-project/blob/7dfbc42cfcdc7522753e95f442c845f371760519/images/costco-email-health.PNG)
+
+![Email Health Analysis](https://github.com/AkshayPatel03/Phishing-Email-Analysis-project/blob/7dfbc42cfcdc7522753e95f442c845f371760519/images/costco-email-health.PNG)
+
+![Email Health Analysis](https://github.com/AkshayPatel03/Phishing-Email-Analysis-project/blob/7dfbc42cfcdc7522753e95f442c845f371760519/images/costco-email-health.PNG)
+
+![Email Health Analysis](https://github.com/AkshayPatel03/Phishing-Email-Analysis-project/blob/7dfbc42cfcdc7522753e95f442c845f371760519/images/costco-email-health.PNG)
+
+
 
 **Phishing Technique**: The email used social engineering tactics, leveraging the allure of a high-value reward to entice recipients to click on a malicious link.
 
