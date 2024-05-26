@@ -56,22 +56,22 @@ This is a detailed report template for a phishing email attack, based on the sce
 - Utilized tools: MXToolbox, custom Python scripts.
 - Findings: The email originated from an IP address known for malicious activities. SPF, DKIM, and DMARC checks failed.
 
-#### Email Health Analysis 
+### Email Health Analysis 
 
 ![Email Health Analysis](https://github.com/AkshayPatel03/Phishing-Email-Analysis-project/blob/7dfbc42cfcdc7522753e95f442c845f371760519/images/costco-email-health.PNG)
 
-#### Email Dmark Fail
+### Email Dmark Fail
 
 ![Email Dmark fail](https://github.com/AkshayPatel03/Phishing-Email-Analysis-project/blob/67ded4a1fb0d68a3692ed3db0442ab6cb6b811e7/images/cotsco-dmark-fail.PNG)
 
-#### Email Header Analysis 
+### Email Header Analysis 
 
 ![Email Header analysis](https://github.com/AkshayPatel03/Phishing-Email-Analysis-project/blob/67ded4a1fb0d68a3692ed3db0442ab6cb6b811e7/images/email-header-analyse.PNG)
 
-#### SPK and DKIM errors
+### SPK and DKIM errors
 ![SPF and DKIM errors](https://github.com/AkshayPatel03/Phishing-Email-Analysis-project/blob/67ded4a1fb0d68a3692ed3db0442ab6cb6b811e7/images/email-header-error-2.PNG)
 
-#### Email Server Blacklist
+### Email Server Blacklist
 ![Email Server Blacklisted](https://github.com/AkshayPatel03/Phishing-Email-Analysis-project/blob/67ded4a1fb0d68a3692ed3db0442ab6cb6b811e7/images/email-server-blacklisted.PNG)
 
 
