@@ -58,15 +58,13 @@ This is a detailed report template for a phishing email attack, based on the sce
 
 ![Email Health Analysis](https://github.com/AkshayPatel03/Phishing-Email-Analysis-project/blob/7dfbc42cfcdc7522753e95f442c845f371760519/images/costco-email-health.PNG)
 
-![Email Health Analysis](https://github.com/AkshayPatel03/Phishing-Email-Analysis-project/blob/7dfbc42cfcdc7522753e95f442c845f371760519/images/costco-email-health.PNG)
+![Email Dmark fail](https://github.com/AkshayPatel03/Phishing-Email-Analysis-project/blob/67ded4a1fb0d68a3692ed3db0442ab6cb6b811e7/images/cotsco-dmark-fail.PNG)
 
-![Email Health Analysis](https://github.com/AkshayPatel03/Phishing-Email-Analysis-project/blob/7dfbc42cfcdc7522753e95f442c845f371760519/images/costco-email-health.PNG)
+![Email Header analysis](https://github.com/AkshayPatel03/Phishing-Email-Analysis-project/blob/67ded4a1fb0d68a3692ed3db0442ab6cb6b811e7/images/email-header-analyse.PNG)
 
-![Email Health Analysis](https://github.com/AkshayPatel03/Phishing-Email-Analysis-project/blob/7dfbc42cfcdc7522753e95f442c845f371760519/images/costco-email-health.PNG)
+![SPF and DKIM errors](https://github.com/AkshayPatel03/Phishing-Email-Analysis-project/blob/67ded4a1fb0d68a3692ed3db0442ab6cb6b811e7/images/email-header-error-2.PNG)
 
-![Email Health Analysis](https://github.com/AkshayPatel03/Phishing-Email-Analysis-project/blob/7dfbc42cfcdc7522753e95f442c845f371760519/images/costco-email-health.PNG)
-
-![Email Health Analysis](https://github.com/AkshayPatel03/Phishing-Email-Analysis-project/blob/7dfbc42cfcdc7522753e95f442c845f371760519/images/costco-email-health.PNG)
+![Email Server Blacklisted](https://github.com/AkshayPatel03/Phishing-Email-Analysis-project/blob/67ded4a1fb0d68a3692ed3db0442ab6cb6b811e7/images/email-server-blacklisted.PNG)
 
 
 
